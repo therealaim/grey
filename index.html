@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grey Receipient Confirmation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="phone">
+     <div class="status-bar">
+      <span id="clock">9:41</span>
+      <span>4G • 8%</span>
+    </div>
+
+    <div class="proto-tag">Grey Receipt • Confirmation</div>
+
+    <!-- WELCOME SCREEN -->
+    <section id="welcome" class="screen">
+      <div class="welcome-top">
+        <div class="logo-wrap">
+          <img src="assets/logo.png" alt="Rhodora logo" onerror="this.style.display='none'">
+        </div>
+        <p class="brand-line">Grey • Confirm if you are the recipient</p>
+
+        <h1 class="big-heading">
+          Welcome back,<br>
+          Receive funds <span class="blue">Rhodora</span><br>
+          <span class="blue">fast &amp; secure.</span>
+        </h1>
+
+        <p class="intro">
+          Sender sends <b>USD</b> and you { Rhodora S Carson} receives <b>PHP</b>.
+          Enter the exact amount to continue.
+        </p>
+      </div>
+
+      <div class="bottom">
+        <button type="button" class="btn-white" id="welcomeContinue">Continue</button>
+      </div>
+    </section>
+
+    <!-- SEND SCREEN -->
+    <section id="send" class="screen hidden">
+      <div class="top-bar">
+        <button type="button" class="back" id="backBtn" aria-label="Back">←</button>
+        <span class="top-title">Sender sends PHP to <span class="blue">Rhodora</span></span>
+      </div>
+
+      <div class="recipient-row">
+        <span class="recipient-name">Rhodora S Carson</span>
+        <div class="avatar">RS</div>
+      </div>
+
+      <label class="field-label">Sender sends</label>
+      <div class="card">
+        <div class="card-row">
+          <div class="pill">🇺🇸 USD</div>
+          <div class="amount-wrap">
+            <span class="prefix">$</span>
+            <input type="text" id="usd" inputmode="decimal" placeholder="0" autocomplete="off">
+          </div>
+        </div>
+        <div class="bal">sender Bal: $440</div>
+      </div>
+
+      <label class="field-label">You {Rhodora S Carson} receives</label>
+      <div class="card">
+        <div class="card-row">
+          <div class="pill"><span class="dot">●</span> PHP</div>
+          <div class="amount-wrap">
+            <span class="prefix">PHP</span>
+            <input type="text" id="php" inputmode="decimal" placeholder="0" autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <p class="hint">ⓘ Enter exact amount to continue</p>
+      <p class="rate-note">Demo rate: 1 USD = 58.5 PHP (not a live rate)</p>
+
+      <div class="bottom">
+        <button type="button" class="btn-white" id="btn" disabled>Continue</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
